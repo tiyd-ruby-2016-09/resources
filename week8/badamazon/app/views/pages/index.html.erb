@@ -2,7 +2,7 @@
   <% unless @categories.empty? %>
   <ul>
     <% @categories.each do |category| %>
-      <li><%= category.name %></li>
+      <li ng-click="displayCategory(<%= category.id %>, '<%= category.name %>')"><%= category.name %></li>
     <% end %>
   </ul>
   <% end %>
