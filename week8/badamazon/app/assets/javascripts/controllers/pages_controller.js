@@ -1,21 +1,13 @@
-badamazonApp.controller('PagesController', function PagesController($scope) {
+badamazonApp.controller('PagesController', ['$scope', 'products', function PagesController($scope, products) {
 
   $scope.displayCategory = function(categoryId, categoryName) {
     console.log(categoryId, categoryName)
   };
 
-  $scope.products = [{
-    id: 1,
-    name: 'bike'
-  }, {
-    id: 2,
-    name: 'lamp'
-  }, {
-    id: 3,
-    name: 'book'
-  }, {
-    id: 4,
-    name: 'dog'
-  }];
+  $scope.loadProducts = function() {
+    products.getProducts().then(function(response) {
+      $scope.products = response.data;
+    });
+  };
 
-});
+}]);
