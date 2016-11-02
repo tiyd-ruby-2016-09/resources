@@ -4,4 +4,18 @@ badamazonApp.controller('PagesController', function PagesController($scope) {
     console.log(categoryId, categoryName)
   };
 
+  $scope.products = [{
+    id: 1,
+    name: 'bike'
+  }, {
+    id: 2,
+    name: 'lamp'
+  }, {
+    id: 3,
+    name: 'book'
+  }, {
+    id: 4,
+    name: 'dog'
+  }];
+
 });
