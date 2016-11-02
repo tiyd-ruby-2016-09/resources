@@ -1,0 +1,9 @@
+<div ng-controller="PagesController">
+  <% unless @categories.empty? %>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= category.name %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>
